@@ -12,6 +12,6 @@
 @interface CoffeePlace : NSObject
 
 @property MKMapItem *mapItem;
-@property float milesDistance;
+@property float milesDifference;
 
 @end

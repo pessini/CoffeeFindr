@@ -15,6 +15,7 @@
 
 @property CLLocationManager *locationManager;
 @property CLLocation *currentLocation;
+@property NSArray *coffeePlacesArray;
 
 @end
 
@@ -44,18 +45,28 @@
     [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
         NSArray *mapItems = response.mapItems;
         NSMutableArray *temporaryArray = [NSMutableArray new];
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
+        {
             MKMapItem *mapItem = [mapItems objectAtIndex:i];
 
             CLLocationDistance metersAway = [mapItem.placemark.location distanceFromLocation:location];
             float milesDifference = metersAway / 1609.34;
             CoffeePlace *coffeePlace = [CoffeePlace new];
             coffeePlace.mapItem = mapItem;
-            coffeePlace.milesDistance = milesDifference;
+            coffeePlace.milesDifference = milesDifference;
 
             [temporaryArray addObject:coffeePlace];
 
-            NSLog(@"%@", coffeePlace.mapItem.name);
+        }
+
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"milesDifference" ascending:true];
+        NSArray *sortedArray = [temporaryArray sortedArrayUsingDescriptors:[NSArray arrayWithObjects: sortDescriptor, nil]];
+        self.coffeePlacesArray = [NSArray arrayWithArray:sortedArray];
+
+
+        for (CoffeePlace *coffeePlace in self.coffeePlacesArray)
+        {
+            NSLog(@"%f", coffeePlace.milesDifference);
         }
 
     }];
