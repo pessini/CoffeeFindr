@@ -16,6 +16,7 @@
 		56BA1A991A8E212C001B8E9E /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BA1A981A8E212C001B8E9E /* ListViewController.m */; };
 		56BA1A9B1A8E2173001B8E9E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BA1A9A1A8E2173001B8E9E /* CoreLocation.framework */; };
 		56BA1A9D1A8E217B001B8E9E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BA1A9C1A8E217B001B8E9E /* MapKit.framework */; };
+		56BA1AA01A8E28F0001B8E9E /* CoffeePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BA1A9F1A8E28F0001B8E9E /* CoffeePlace.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		56BA1A981A8E212C001B8E9E /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		56BA1A9A1A8E2173001B8E9E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		56BA1A9C1A8E217B001B8E9E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		56BA1A9E1A8E28F0001B8E9E /* CoffeePlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeePlace.h; sourceTree = "<group>"; };
+		56BA1A9F1A8E28F0001B8E9E /* CoffeePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeePlace.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				56BA1A761A8E203C001B8E9E /* AppDelegate.m */,
 				56BA1A971A8E212C001B8E9E /* ListViewController.h */,
 				56BA1A981A8E212C001B8E9E /* ListViewController.m */,
+				56BA1A9E1A8E28F0001B8E9E /* CoffeePlace.h */,
+				56BA1A9F1A8E28F0001B8E9E /* CoffeePlace.m */,
 				56BA1A7B1A8E203C001B8E9E /* Main.storyboard */,
 				56BA1A7E1A8E203C001B8E9E /* Images.xcassets */,
 				56BA1A801A8E203C001B8E9E /* LaunchScreen.xib */,
@@ -228,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BA1A771A8E203C001B8E9E /* AppDelegate.m in Sources */,
+				56BA1AA01A8E28F0001B8E9E /* CoffeePlace.m in Sources */,
 				56BA1A741A8E203C001B8E9E /* main.m in Sources */,
 				56BA1A991A8E212C001B8E9E /* ListViewController.m in Sources */,
 			);

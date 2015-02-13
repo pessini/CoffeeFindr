@@ -9,6 +9,7 @@
 #import "ListViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "CoffeePlace.h"
 
 @interface ListViewController () <CLLocationManagerDelegate>
 
@@ -33,11 +34,39 @@
     [self.locationManager startUpdatingLocation];
 }
 
+- (void)findCoffeePlaces:(CLLocation *)location
+{
+    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+    request.naturalLanguageQuery = @"coffee";
+    request.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(.05, .05));
+
+    MKLocalSearch *search = [[MKLocalSearch alloc] initWithRequest:request];
+    [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
+        NSArray *mapItems = response.mapItems;
+        NSMutableArray *temporaryArray = [NSMutableArray new];
+        for (int i = 0; i < 5; i++) {
+            MKMapItem *mapItem = [mapItems objectAtIndex:i];
+
+            CLLocationDistance metersAway = [mapItem.placemark.location distanceFromLocation:location];
+            float milesDifference = metersAway / 1609.34;
+            CoffeePlace *coffeePlace = [CoffeePlace new];
+            coffeePlace.mapItem = mapItem;
+            coffeePlace.milesDistance = milesDifference;
+
+            [temporaryArray addObject:coffeePlace];
+
+            NSLog(@"%@", coffeePlace.mapItem.name);
+        }
+
+    }];
+}
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     self.currentLocation =  locations.firstObject;
     NSLog(@"%@", self.currentLocation);
     [self.locationManager stopUpdatingLocation];
+    [self findCoffeePlaces:self.currentLocation];
 }
 
 
