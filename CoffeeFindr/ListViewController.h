@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ListViewController.h
 //  CoffeeFindr
 //
 //  Created by Leandro Pessini on 2/13/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ListViewController : UIViewController
 
 @end
-
