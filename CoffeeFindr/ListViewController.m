@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "CoffeePlace.h"
+#import "DetailViewController.h"
 
 @interface ListViewController () <CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -86,9 +87,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell.textLabel.text = [[[self.coffeePlacesArray objectAtIndex:indexPath.row] mapItem ] name];
 
-
-
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+
+    DetailViewController *detailVC = [segue destinationViewController];
+    detailVC.coffeePlace = [self.coffeePlacesArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    detailVC.currentLocation = self.currentLocation;
+
 }
 
 

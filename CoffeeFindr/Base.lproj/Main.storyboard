@@ -27,6 +27,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gKm-Rh-Alb" id="aRl-5H-R5F">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="YnT-qY-OsT" kind="show" id="lTk-ox-EDx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -73,6 +76,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1335" y="188"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="URf-Qe-jfR">
+            <objects>
+                <viewController id="YnT-qY-OsT" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CiH-Lz-bkP"/>
+                        <viewControllerLayoutGuide type="bottom" id="JOr-cK-jXK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cXX-io-MDo">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Directions" translatesAutoresizingMaskIntoConstraints="NO" id="PfS-rR-hb8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JOr-cK-jXK" firstAttribute="top" secondItem="PfS-rR-hb8" secondAttribute="bottom" id="d1T-QD-vy1"/>
+                            <constraint firstItem="PfS-rR-hb8" firstAttribute="top" secondItem="CiH-Lz-bkP" secondAttribute="bottom" id="h9S-Vq-mJN"/>
+                            <constraint firstItem="PfS-rR-hb8" firstAttribute="leading" secondItem="cXX-io-MDo" secondAttribute="leadingMargin" constant="-16" id="iDB-lT-s5z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PfS-rR-hb8" secondAttribute="trailing" constant="-16" id="p7o-AM-pp1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="PfS-rR-hb8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="h9S-Vq-mJN"/>
+                                <exclude reference="iDB-lT-s5z"/>
+                                <exclude reference="p7o-AM-pp1"/>
+                                <exclude reference="d1T-QD-vy1"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="PfS-rR-hb8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="h9S-Vq-mJN"/>
+                                <include reference="iDB-lT-s5z"/>
+                                <include reference="p7o-AM-pp1"/>
+                                <include reference="d1T-QD-vy1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="PfS-rR-hb8" id="fhL-xc-lNJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10L-gZ-tRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041.5" y="188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YlD-FH-AbC">
