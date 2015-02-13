@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5659811B1A8E42E900717656 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5659811A1A8E42E900717656 /* Images.xcassets */; };
 		56BA1A741A8E203C001B8E9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BA1A731A8E203C001B8E9E /* main.m */; };
 		56BA1A771A8E203C001B8E9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BA1A761A8E203C001B8E9E /* AppDelegate.m */; };
 		56BA1A7D1A8E203C001B8E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BA1A7B1A8E203C001B8E9E /* Main.storyboard */; };
-		56BA1A7F1A8E203C001B8E9E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56BA1A7E1A8E203C001B8E9E /* Images.xcassets */; };
 		56BA1A821A8E203C001B8E9E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BA1A801A8E203C001B8E9E /* LaunchScreen.xib */; };
 		56BA1A8E1A8E203C001B8E9E /* CoffeeFindrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BA1A8D1A8E203C001B8E9E /* CoffeeFindrTests.m */; };
 		56BA1A991A8E212C001B8E9E /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BA1A981A8E212C001B8E9E /* ListViewController.m */; };
@@ -31,13 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5659811A1A8E42E900717656 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		56BA1A6E1A8E203C001B8E9E /* CoffeeFindr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeFindr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BA1A721A8E203C001B8E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BA1A731A8E203C001B8E9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56BA1A751A8E203C001B8E9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56BA1A761A8E203C001B8E9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		56BA1A7C1A8E203C001B8E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		56BA1A7E1A8E203C001B8E9E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		56BA1A811A8E203C001B8E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		56BA1A871A8E203C001B8E9E /* CoffeeFindrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeFindrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BA1A8C1A8E203C001B8E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,8 +104,8 @@
 				56BA1A9E1A8E28F0001B8E9E /* CoffeePlace.h */,
 				56BA1A9F1A8E28F0001B8E9E /* CoffeePlace.m */,
 				56BA1A7B1A8E203C001B8E9E /* Main.storyboard */,
-				56BA1A7E1A8E203C001B8E9E /* Images.xcassets */,
 				56BA1A801A8E203C001B8E9E /* LaunchScreen.xib */,
+				5659811A1A8E42E900717656 /* Images.xcassets */,
 				56BA1A711A8E203C001B8E9E /* Supporting Files */,
 			);
 			path = CoffeeFindr;
@@ -217,9 +217,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5659811B1A8E42E900717656 /* Images.xcassets in Resources */,
 				56BA1A7D1A8E203C001B8E9E /* Main.storyboard in Resources */,
 				56BA1A821A8E203C001B8E9E /* LaunchScreen.xib in Resources */,
-				56BA1A7F1A8E203C001B8E9E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +432,7 @@
 				56BA1A931A8E203C001B8E9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56BA1A941A8E203C001B8E9E /* Build configuration list for PBXNativeTarget "CoffeeFindrTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +441,7 @@
 				56BA1A961A8E203C001B8E9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
